@@ -1,0 +1,237 @@
+
+<style>
+.highlight {
+	background-color: yellow;
+}
+.highlightvalue {
+	background-color: lightgreen;
+}
+.error { 
+	color: red;
+}
+.ok { 
+	color: green;
+}
+#visiblehtml {
+	font-family: monospace;
+	font-size: 90%
+
+}
+
+</style>
+<h1>Source string</h1>
+<p>Use an URL to query an external source, or paste a result (e.g. from UDP monitor) in the input field</p>
+<p>Fetch URL: <input type="text" id="fetchurl" value="http://wh2600/livedata.htm"><button type="button" id="btnurl" onclick="requesturl(); return false;">Request</button></p>
+<p>Or: Paste a string: <input id="inputstring"></p>
+
+ 
+<h1>Result</h1>
+<p>Command recognition: <input name="recognition" id="recognition" type="text">
+<p>Regex: <span id="regex"></span></p>
+<p>Found value: <span id="foundval"></span></p>
+<p>Status: <span id="syntaxstatus"></span></p>
+
+<h1>Input text</h1>
+<span id="rawhtml" style="display: none;"></span>
+<span id="visiblehtml"></span>
+
+
+<script>
+
+var rawhtml;
+
+$(function()
+{
+	console.log("Loaded.");
+});
+
+$('#recognition').on('input', function() { 
+	$('#syntaxstatus').html('<span class="ok">OK</span>');
+	var recstr = $('#recognition').val();
+	var regex = parse_recstring( recstr ); 
+	// var regexval = parse_valuestring( $('#recognition').val() );
+	var regexval;
+	var conversion=0;
+	if      (recstr.indexOf('\\v') != -1) {
+		regexval = '^ *[0-9.,-]*';
+	}
+	else if (recstr.indexOf('\\1') != -1) {
+		regexval = '[\x00-\xFF]';
+		conversion = 1;
+	}
+	else if (recstr.indexOf('\\2') != -1) {
+		regexval = '(?<=^.{1})[\x00-\xFF]';
+		conversion = 1;
+	}
+	else if (recstr.indexOf('\\3') != -1) {
+		regexval = '(?<=^.{2})[\x00-\xFF]';
+		conversion = 1;
+	}
+	else if (recstr.indexOf('\\4') != -1) {
+		regexval = '(?<=^.{3})[\x00-\xFF]';
+		conversion = 1;
+	}
+	<!-- else if (recstr.indexOf('\\h') != -1) { -->
+		<!-- regexval = '^ *[0-9.,-]*'; -->
+		<!-- conversion = 1; -->
+	<!-- } -->
+	
+	var searchtext = rawhtml;
+	var regex_result;
+	try {
+		regex_result = searchtext.match(regex);
+		console.log("Regex Result:", regex_result[0], regex_result.index);
+	} catch(e) {
+		$('#syntaxstatus').html('<span class="error">Error in expression</span>');
+		highlight(0, 0);
+		return;
+	}
+	
+	var regexval_result;
+	try {
+			searchtext = searchtext.substr(regex_result.index+regex_result[0].length);
+			console.log("Regexval:", regexval, "Searchtext:", searchtext.substr(searchtext, 15)+"...");
+			regexval_result = searchtext.match(regexval);
+			var resultvalue = regexval_result[0];
+			if (conversion == 1) { 
+				// Generate ASCII Code
+				resultvalue = regexval_result[0].charCodeAt(0);
+			}
+			
+			console.log("Regex Value:", resultvalue);
+			$('#foundval').html('<span class="ok">' + resultvalue + '</span>');
+			
+	}	
+	catch (e) { 
+		$('#foundval').html('<span class="error">No value found</span>');
+	}
+	
+	if (regex_result[0] && regexval_result[0]) {
+		console.log("Highlight String and Value");
+		highlight(regex_result.index, regex_result[0].length, regexval_result.index, regexval_result[0].length);
+	}
+	else if (regex_result[0]) {
+		console.log("Highlight String only");
+		highlight(regex_result.index, regex_result[0].length);
+	}
+});
+
+$('#inputstring').on('input', function() {
+	var str = $('#inputstring').val();
+	str = str.replace('\\n', "\n");
+	rawhtml = str;
+	$('#visiblehtml').html(htmlEncode(rawhtml));
+	
+});
+	
+function parse_recstring(recstr)
+{
+	// console.log("Recognition string:", recstr);
+	var regex=recstr;
+	var i_count = 0;
+	if (!regex) return;
+	while(regex.indexOf("\\i") !== -1) {
+		i_count++;
+		console.log("i is", i_count, "regex is", regex);
+		if(i_count%2) {
+			//regex = regex.replace("\\i", "([\\s\\S]*");
+			regex = regex.replace("\\i", "(.*?)(");
+		} else {
+			//regex = regex.replace ("\\i", ")/s");
+			regex = regex.replace ("\\i", ")");
+		}
+		if(i_count > 100) 
+			break;
+	}
+	
+	
+	/* Search Strings */
+	
+	// \x.. (hex value) is \x..
+	// regex = regex.replace(/\\\\/g, '\\'); // Double-backslash to single backslash
+	// \\ needs validation
+	regex = regex.replace(/\\w/g, '([^\s]+)'); // \w to "any word" regex
+	regex = regex.replace(/\\#/g, '[-0-9]+'); // \w to "any word" regex
+	regex = regex.replace(/\\\./g, '.'); // \. to .
+	regex = regex.replace(/\\r/g, '\n'); // \r to \n (0x0a)
+	regex = regex.replace(/\\b/g, '\r'); // \b to \r (0x0d)
+	// \d is \d - no need to replace
+	regex = regex.replace(/\\d/g, '[0-9]'); // \d to digits
+	regex = regex.replace(/\\m/g, '[A-Za-z0-9]'); // \m to letters and digits
+	regex = regex.replace(/\\a/g, '[A-Za-z]'); // \a to letters
+	regex = regex.replace(/(\\s)(\d{1,6})/gs, '.{$2}'); // \a to letters
+	
+	/* Value evaluation */
+	// Remove everything after value eval string in regex
+	regex = regex.replace(/(\\v)(.*)/gs, "");
+	regex = regex.replace(/(\\1)(.*)/gs, "");
+	regex = regex.replace(/(\\2)(.*)/gs, "");
+	regex = regex.replace(/(\\3)(.*)/gs, "");
+	regex = regex.replace(/(\\4)(.*)/gs, "");
+	regex = regex.replace(/(\\h)(.*)/gs, "");
+	$('#regex').text(regex);
+	return regex;
+}
+
+function highlight(index = 0, strlength = 0, indexval = 0, strvallength = 0) {
+	var inputText = rawhtml;
+	if (inputText) { 
+		// String highlight
+		var visiblehtml = 
+			inputText.substring(0, index) + 
+			"***highlight*" + 
+			inputText.substring(index, index+strlength) + 
+			"*highlight***" + 
+			"***highlightval*" + 
+			inputText.substring(index+strlength, index+strlength+strvallength) + 
+			"*highlightval***" + 
+			inputText.substring(index+strlength+strvallength);
+		console.log("Highlight values", index, strlength, indexval, strvallength);
+		console.log("highlight Visiblehtml", visiblehtml);
+		visiblehtml = htmlEncode(visiblehtml);
+		visiblehtml = visiblehtml.replace('***highlight*', '<span class="highlight">');
+		visiblehtml = visiblehtml.replace('*highlight***', '</span>');
+		visiblehtml = visiblehtml.replace('***highlightval*', '<span class="highlightvalue">');
+		visiblehtml = visiblehtml.replace('*highlightval***', '</span>');
+		
+		$("#visiblehtml").html(visiblehtml);
+	}
+}
+
+
+function requesturl() {
+	var url = $('#fetchurl').val();
+	var jqxhr = $.post( "ajax.cgi", { action: 'request', url: url })
+	.done(function(data) {
+		rawhtml = data;
+		$('#visiblehtml').html(htmlEncode(data));
+		
+		return;
+	})
+	.fail(function() {
+		$('#visiblehtml').html("<red>Error fetching URL</red>");
+		rawhtml = "";
+		return;
+	})
+	.always(function() {
+    //alert( "finished" );
+	return;
+  });
+}
+
+function htmlEncode(value){
+  //create a in-memory div, set it's inner text(which jQuery automatically encodes)
+  //then grab the encoded contents back out.  The div never exists on the page.
+  var enchtml = $('<div/>').text(value).html();
+  enchtml = enchtml.replace(/(?:\r\n|\r|\n)/g, '<br>');
+  // Blancs should be viewed too.
+  
+  return enchtml;
+}
+
+function htmlDecode(value){
+  return $('<div/>').html(value).text();
+}
+
+
+</script>
