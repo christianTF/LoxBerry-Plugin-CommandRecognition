@@ -19,22 +19,28 @@
 }
 
 </style>
-<h1>Source string</h1>
+<table>
+<tr>
+<td style="vertical-align: top; width: 50%;">
+<h2>Source string</h2>
 <p>Use an URL to query an external source, or paste a result (e.g. from UDP monitor) in the input field</p>
 <p>Fetch URL: <input type="text" id="fetchurl" value="http://wh2600/livedata.htm"><button type="button" id="btnurl" onclick="requesturl(); return false;">Request</button></p>
 <p>Or: Paste a string: <input id="inputstring"></p>
 
  
-<h1>Result</h1>
+<h2>Result</h2>
 <p>Command recognition: <input name="recognition" id="recognition" type="text">
-<p>Regex: <span id="regex"></span></p>
+<!-- <p>Regex: <span id="regex"></span></p> -->
 <p>Found value: <span id="foundval"></span></p>
 <p>Status: <span id="syntaxstatus"></span></p>
-
-<h1>Input text</h1>
+</td>
+<td style="vertical-align: top; width: 50%;">
+<h2>Input text</h2>
 <span id="rawhtml" style="display: none;"></span>
 <span id="visiblehtml"></span>
-
+</td>
+</tr>
+</table>
 
 <script>
 
@@ -200,6 +206,7 @@ function highlight(index = 0, strlength = 0, indexval = 0, strvallength = 0) {
 
 
 function requesturl() {
+	$('#visiblehtml').html('<span class="OK">Please wait...</span>');
 	var url = $('#fetchurl').val();
 	var jqxhr = $.post( "ajax.cgi", { action: 'request', url: url })
 	.done(function(data) {
