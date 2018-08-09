@@ -40,7 +40,7 @@
  
 <h2>Result</h2>
 <p>Command recognition: <input name="recognition" id="recognition" type="text">
-<!-- <p>Regex: <span id="regex"></span></p> -->
+<p>Regex: <span id="regex"></span></p> 
 <p>Found value: <span id="foundval"></span></p>
 <p>Status: <span id="syntaxstatus"></span></p>
 </td>
@@ -175,9 +175,14 @@ function parse_recstring(recstr)
 	// \x.. (hex value) is \x..
 	// regex = regex.replace(/\\\\/g, '\\'); // Double-backslash to single backslash
 	// \\ needs validation
-	regex = regex.replace(/\\w/g, '([^\s]+)'); // \w to "any word" regex
+	regex = regex.replace(/\\w/g, '([^\\s]+)'); // \w to "any word" regex
 	regex = regex.replace(/\\#/g, '[-0-9]+'); // \w to "any word" regex
-	regex = regex.replace(/\\\./g, '.'); // \. to .
+	regex = regex.replace(/[^\\]\./g, '\.'); // Replace the dot to an escaped dot
+	
+	
+	
+	regex = regex.replace(/\./g, '\\.'); // \. to .
+	regex = regex.replace(/\\\\\./g, '.'); // \. to .
 	regex = regex.replace(/\\r/g, '\n'); // \r to \n (0x0a)
 	regex = regex.replace(/\\b/g, '\r'); // \b to \r (0x0d)
 	// \d is \d - no need to replace
