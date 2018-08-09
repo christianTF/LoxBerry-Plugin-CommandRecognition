@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use LoxBerry::Web;
-my $plugintitle = "Command Recognition";
+my $plugintitle = "Command Recognition V" . LoxBerry::System::pluginversion();
 my $helplink = "http://www.loxwiki.eu:80/x/2wzL";
 # my $helptemplate = "help.html";
 
