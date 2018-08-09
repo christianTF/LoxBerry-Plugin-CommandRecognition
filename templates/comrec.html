@@ -14,14 +14,15 @@
 }
 #visiblehtml {
 	font-family: monospace;
-	font-size: 90%
+	font-size: 90%;
+	white-space: pre;
 
 }
 
 </style>
-<table style="width: 100%;">
+<table style="width: 100%; table-layout: fixed;">
 <tr>
-<td style="vertical-align: top; width: 50%;">
+<td style="vertical-align: top; width: 40%;">
 <h2>Source</h2>
 <div data-role="navbar">
 	<ul>
@@ -44,10 +45,13 @@
 <p>Found value: <span id="foundval"></span></p>
 <p>Status: <span id="syntaxstatus"></span></p>
 </td>
-<td style="vertical-align: top; width: 50%;">
+<td style="vertical-align: top; width: 60%; ">
 <h2>Input text</h2>
+<p id="sslwarning"></p>
+<div style="width: 100%; height: 70vh; overflow-y: auto;">
 <span id="rawhtml" style="display: none;"></span>
 <span id="visiblehtml"></span>
+</div>
 </td>
 </tr>
 </table>
@@ -237,17 +241,35 @@ function highlight(index = 0, strlength = 0, indexval = 0, strvallength = 0) {
 
 
 function requesturl() {
+	$('#sslwarning').html("");
 	$('#visiblehtml').html('<span class="OK">Please wait...</span>');
-	var url = $('#fetchurl').val();
+	var url = $('#fetchurl').val().trim();
+	if (! url.startsWith("http://") && ! url.startsWith("https://")) {
+		url = 'http://' + url;
+	}	
+	if (url.startsWith("https://")) {
+		$('#sslwarning').html('<p class="error">This plugin supports SSL (https), but Loxone Miniserver does <u>not</u>. To use https from the Miniserver, use the LoxBerry plugin <a href="https://www.loxwiki.eu/x/lYKO" target="_blank"><i>https2http</i></a>.</p>');
+	
+	}
+	
+	
+	
+	$('#fetchurl').val(url);
+	
+	
+	
 	var jqxhr = $.post( "ajax.cgi", { action: 'request', url: url })
 	.done(function(data) {
 		rawhtml = data;
-		$('#visiblehtml').html(htmlEncode(data));
-		
+		if (rawhtml === "") {
+			$('#visiblehtml').html('<span style="color: blue;">Website returned empty data</span>');
+		} else {
+			$('#visiblehtml').html(htmlEncode(data));
+		}
 		return;
 	})
 	.fail(function() {
-		$('#visiblehtml').html("<red>Error fetching URL</red>");
+		$('#visiblehtml').html('<span class="Error">Error fetching URL</span>');
 		rawhtml = "";
 		return;
 	})
