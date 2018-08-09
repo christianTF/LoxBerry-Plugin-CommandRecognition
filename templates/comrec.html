@@ -159,7 +159,7 @@ function parse_recstring(recstr)
 		i_count++;
 		console.log("i is", i_count, "regex is", regex);
 		if(i_count%2) {
-			regex = regex.replace("\\i", "([\\s\\S]*");
+			regex = regex.replace("\\i", "([\\s\\S]*?");
 			//regex = regex.replace("\\i", "(.*?)(");
 		} else {
 			regex = regex.replace ("\\i", ")");
