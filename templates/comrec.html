@@ -24,13 +24,13 @@
 <td style="vertical-align: top; width: 50%;">
 <h2>Source string</h2>
 <p>Use an URL to query an external source, or paste a result (e.g. from UDP monitor) in the input field</p>
-<p>Fetch URL: <input type="text" id="fetchurl" value="http://wh2600/livedata.htm"><button type="button" id="btnurl" onclick="requesturl(); return false;">Request</button></p>
+<p>Fetch URL: <input type="text" id="fetchurl" value="http://localhost/plugins/commandrecognition/wudemo.json"><button type="button" id="btnurl" onclick="requesturl(); return false;">Request</button></p>
 <p>Or: Paste a string: <input id="inputstring"></p>
 
  
 <h2>Result</h2>
 <p>Command recognition: <input name="recognition" id="recognition" type="text">
-<!-- <p>Regex: <span id="regex"></span></p> -->
+<p>Regex: <span id="regex"></span></p>
 <p>Found value: <span id="foundval"></span></p>
 <p>Status: <span id="syntaxstatus"></span></p>
 </td>
@@ -52,6 +52,12 @@ $(function()
 });
 
 $('#recognition').on('input', function() { 
+	update_result();
+});
+
+function update_result()
+{
+	
 	$('#syntaxstatus').html('<span class="ok">OK</span>');
 	var recstr = $('#recognition').val();
 	var regex = parse_recstring( recstr ); 
@@ -59,7 +65,9 @@ $('#recognition').on('input', function() {
 	var regexval;
 	var conversion=0;
 	if      (recstr.indexOf('\\v') != -1) {
-		regexval = '^ *[0-9.,-]*';
+		//regexval = '^(-)?[0-9.,]*';
+		//regexval = '^(-)?[0-9.,]*';
+		regexval = '^(-)?\\d+[.,]?\\d*';
 	}
 	else if (recstr.indexOf('\\1') != -1) {
 		regexval = '[\x00-\xFF]';
@@ -120,13 +128,14 @@ $('#recognition').on('input', function() {
 		console.log("Highlight String only");
 		highlight(regex_result.index, regex_result[0].length);
 	}
-});
+}
 
 $('#inputstring').on('input', function() {
 	var str = $('#inputstring').val();
 	str = str.replace('\\n', "\n");
 	rawhtml = str;
 	$('#visiblehtml').html(htmlEncode(rawhtml));
+	update_result();
 	
 });
 	
@@ -140,11 +149,11 @@ function parse_recstring(recstr)
 		i_count++;
 		console.log("i is", i_count, "regex is", regex);
 		if(i_count%2) {
-			//regex = regex.replace("\\i", "([\\s\\S]*");
-			regex = regex.replace("\\i", "(.*?)(");
+			regex = regex.replace("\\i", "([\\s\\S]*");
+			//regex = regex.replace("\\i", "(.*?)(");
 		} else {
-			//regex = regex.replace ("\\i", ")/s");
 			regex = regex.replace ("\\i", ")");
+			//regex = regex.replace ("\\i", ")");
 		}
 		if(i_count > 100) 
 			break;
@@ -175,6 +184,7 @@ function parse_recstring(recstr)
 	regex = regex.replace(/(\\3)(.*)/gs, "");
 	regex = regex.replace(/(\\4)(.*)/gs, "");
 	regex = regex.replace(/(\\h)(.*)/gs, "");
+	// regex = '/' + regex + '/';
 	$('#regex').text(regex);
 	return regex;
 }

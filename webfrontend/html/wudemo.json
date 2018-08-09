@@ -1,0 +1,1408 @@
+
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "alerts": 1
+  ,
+  "conditions": 1
+  ,
+  "forecast": 1
+  ,
+  "hourly": 1
+  }
+	}
+  ,	"current_observation": {
+		"image": {
+		"url":"http://icons.wxug.com/graphics/wu2/logo_130x80.png",
+		"title":"Weather Underground",
+		"link":"http://www.wunderground.com"
+		},
+		"display_location": {
+		"full":"Linz, Austria",
+		"city":"Linz",
+		"state":"4",
+		"state_name":"Austria",
+		"country":"OS",
+		"country_iso3166":"AT",
+		"zip":"00000",
+		"magic":"167",
+		"wmo":"11060",
+		"latitude":"48.32",
+		"longitude":"14.23",
+		"elevation":"367.0"
+		},
+		"observation_location": {
+		"full":"Linz / Stadt, OBERöSTERREICH",
+		"city":"Linz / Stadt",
+		"state":"OBERöSTERREICH",
+		"country":"AT",
+		"country_iso3166":"AT",
+		"latitude":"48.32",
+		"longitude":"14.23",
+		"elevation":"1004 ft"
+		},
+		"estimated": {
+		},
+		"station_id":"IOBERSTE911",
+		"observation_time":"Last Updated on August 9, 08:44 CEST",
+		"observation_time_rfc822":"Thu, 09 Aug 2018 08:44:58 +0200",
+		"observation_epoch":"1533797098",
+		"local_time_rfc822":"Thu, 09 Aug 2018 08:45:08 +0200",
+		"local_epoch":"1533797108",
+		"local_tz_short":"CEST",
+		"local_tz_long":"Europe/Vienna",
+		"local_tz_offset":"+0200",
+		"weather":"",
+		"temperature_string":"77.2 F (25.1 C)",
+		"temp_f":77.2,
+		"temp_c":25.1,
+		"relative_humidity":"68%",
+		"wind_string":"Calm",
+		"wind_dir":"Süd-Südwest",
+		"wind_degrees":212,
+		"wind_mph":0,
+		"wind_gust_mph":0,
+		"wind_kph":0,
+		"wind_gust_kph":0,
+		"pressure_mb":"1015",
+		"pressure_in":"29.96",
+		"pressure_trend":"+",
+		"dewpoint_string":"66 F (19 C)",
+		"dewpoint_f":66,
+		"dewpoint_c":19,
+		"heat_index_string":"NA",
+		"heat_index_f":"NA",
+		"heat_index_c":"NA",
+		"windchill_string":"NA",
+		"windchill_f":"NA",
+		"windchill_c":"NA",
+		"feelslike_string":"77.2 F (26 C)",
+		"feelslike_f":"77.2",
+		"feelslike_c":"26",
+		"visibility_mi":"",
+		"visibility_km":"",
+		"solarradiation":"289",
+		"UV":"2.0","precip_1hr_string":"0.00 in ( 0 mm)",
+		"precip_1hr_in":"0.00",
+		"precip_1hr_metric":" 0",
+		"precip_today_string":"0.00 in (0 mm)",
+		"precip_today_in":"0.00",
+		"precip_today_metric":"0",
+		"icon":"",
+		"icon_url":"http://icons.wxug.com/i/c/k/.gif",
+		"forecast_url":"http://www.wunderground.com/global/stations/11060.html",
+		"history_url":"http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IOBERSTE149",
+		"ob_url":"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=48.315018,14.230636",
+		"nowcast":""
+	}
+		,
+	"forecast":{
+		"txt_forecast": {
+		"date":"07:24 CEST",
+		"forecastday": [
+		{
+		"period":0,
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"title":"Donnerstag",
+		"fcttext":"Meistens klar. Heiß. Höchsttemperatur 97F. Wind aus SO mit 5 bis 10 mph.",
+		"fcttext_metric":"Meistens klar. Heiß. Höchsttemperatur 36C. Wind aus SO mit 10 bis 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":1,
+		"icon":"nt_clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"title":"Donnerstag Nacht",
+		"fcttext":"Meistens klar. Tiefsttemperatur 68F. Wind aus SSO, später W mit 10 bis 15 mph.",
+		"fcttext_metric":"Meistens klar. Tiefsttemperatur 20C. Wind aus SSO, später W mit 15 bis 25 km/h.",
+		"pop":"10"
+		}
+		,
+		{
+		"period":2,
+		"icon":"cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"title":"Freitag",
+		"fcttext":"Bedeckt. Höchsttemperatur 72F. Wind aus W mit 10 bis 15 mph.",
+		"fcttext_metric":"Bedeckt. Höchsttemperatur 22C. Wind aus W mit 15 bis 25 km/h.",
+		"pop":"20"
+		}
+		,
+		{
+		"period":3,
+		"icon":"nt_chancerain",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_chancerain.gif",
+		"title":"Freitag Nacht",
+		"fcttext":"Schauer. Tiefsttemperatur 59F. Wind aus W mit 5 bis 10 mph. Regenrisiko 50 %.",
+		"fcttext_metric":"Schauer. Tiefsttemperatur 15C. Wind aus W mit 10 bis 15 km/h. Regenrisiko 50 %.",
+		"pop":"50"
+		}
+		,
+		{
+		"period":4,
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"title":"Samstag",
+		"fcttext":"Meistens klar. Höchsttemperatur 81F. Wind aus W mit 5 bis 10 mph.",
+		"fcttext_metric":"Meistens klar. Höchsttemperatur 27C. Wind aus W mit 10 bis 15 km/h.",
+		"pop":"10"
+		}
+		,
+		{
+		"period":5,
+		"icon":"nt_clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"title":"Samstag Nacht",
+		"fcttext":"Meistens klar. Tiefsttemperatur 56F. Wind aus NW mit 5 bis 10 mph.",
+		"fcttext_metric":"Meistens klar. Tiefsttemperatur 14C. Wind aus NW mit 10 bis 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":6,
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"title":"Sonntag",
+		"fcttext":"Teilweise bedeckt. Höchsttemperatur 87F. Wind aus O mit 5 bis 10 mph.",
+		"fcttext_metric":"Teilweise bedeckt. Höchsttemperatur 31C. Wind aus O mit 10 bis 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":7,
+		"icon":"nt_clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"title":"Sonntag Nacht",
+		"fcttext":"Meistens klar. Tiefsttemperatur 61F. Wind aus OSO mit 5 bis 10 mph.",
+		"fcttext_metric":"Meistens klar. Tiefsttemperatur 16C. Wind aus OSO mit 10 bis 15 km/h.",
+		"pop":"0"
+		}
+		]
+		},
+		"simpleforecast": {
+		"forecastday": [
+		{"date":{
+	"epoch":"1533834000",
+	"pretty":"07:00 PM CEST am 09. August 2018",
+	"day":9,
+	"month":8,
+	"year":2018,
+	"yday":220,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"August",
+	"monthname_short":"Aug",
+	"weekday_short":"Do",
+	"weekday":"Donnerstag",
+	"ampm":"PM",
+	"tz_short":"CEST",
+	"tz_long":"Europe/Vienna"
+},
+		"period":1,
+		"high": {
+		"fahrenheit":"97",
+		"celsius":"36"
+		},
+		"low": {
+		"fahrenheit":"68",
+		"celsius":"20"
+		},
+		"conditions":"Heiter",
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 10,
+		"kph": 16,
+		"dir": "SO",
+		"degrees": 130
+		},
+		"avewind": {
+		"mph": 9,
+		"kph": 14,
+		"dir": "SO",
+		"degrees": 130
+		},
+		"avehumidity": 38,
+		"maxhumidity": 73,
+		"minhumidity": 22
+		}
+		,
+		{"date":{
+	"epoch":"1533920400",
+	"pretty":"07:00 PM CEST am 10. August 2018",
+	"day":10,
+	"month":8,
+	"year":2018,
+	"yday":221,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"August",
+	"monthname_short":"Aug",
+	"weekday_short":"Fr",
+	"weekday":"Freitag",
+	"ampm":"PM",
+	"tz_short":"CEST",
+	"tz_long":"Europe/Vienna"
+},
+		"period":2,
+		"high": {
+		"fahrenheit":"72",
+		"celsius":"22"
+		},
+		"low": {
+		"fahrenheit":"59",
+		"celsius":"15"
+		},
+		"conditions":"Bedeckt",
+		"icon":"cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"skyicon":"",
+		"pop":20,
+		"qpf_allday": {
+		"in": 0.15,
+		"mm": 4
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.15,
+		"mm": 4
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 15,
+		"kph": 24,
+		"dir": "W",
+		"degrees": 278
+		},
+		"avewind": {
+		"mph": 11,
+		"kph": 18,
+		"dir": "W",
+		"degrees": 278
+		},
+		"avehumidity": 61,
+		"maxhumidity": 77,
+		"minhumidity": 50
+		}
+		,
+		{"date":{
+	"epoch":"1534006800",
+	"pretty":"07:00 PM CEST am 11. August 2018",
+	"day":11,
+	"month":8,
+	"year":2018,
+	"yday":222,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"August",
+	"monthname_short":"Aug",
+	"weekday_short":"Sa",
+	"weekday":"Samstag",
+	"ampm":"PM",
+	"tz_short":"CEST",
+	"tz_long":"Europe/Vienna"
+},
+		"period":3,
+		"high": {
+		"fahrenheit":"81",
+		"celsius":"27"
+		},
+		"low": {
+		"fahrenheit":"56",
+		"celsius":"13"
+		},
+		"conditions":"Heiter",
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"skyicon":"",
+		"pop":10,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 10,
+		"kph": 16,
+		"dir": "W",
+		"degrees": 267
+		},
+		"avewind": {
+		"mph": 8,
+		"kph": 13,
+		"dir": "W",
+		"degrees": 267
+		},
+		"avehumidity": 57,
+		"maxhumidity": 82,
+		"minhumidity": 33
+		}
+		,
+		{"date":{
+	"epoch":"1534093200",
+	"pretty":"07:00 PM CEST am 12. August 2018",
+	"day":12,
+	"month":8,
+	"year":2018,
+	"yday":223,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"August",
+	"monthname_short":"Aug",
+	"weekday_short":"So",
+	"weekday":"Sonntag",
+	"ampm":"PM",
+	"tz_short":"CEST",
+	"tz_long":"Europe/Vienna"
+},
+		"period":4,
+		"high": {
+		"fahrenheit":"87",
+		"celsius":"31"
+		},
+		"low": {
+		"fahrenheit":"61",
+		"celsius":"16"
+		},
+		"conditions":"Teils Wolkig",
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 10,
+		"kph": 16,
+		"dir": "O",
+		"degrees": 99
+		},
+		"avewind": {
+		"mph": 9,
+		"kph": 14,
+		"dir": "O",
+		"degrees": 99
+		},
+		"avehumidity": 50,
+		"maxhumidity": 73,
+		"minhumidity": 30
+		}
+		]
+		}
+	}
+		,
+	"hourly_forecast": [
+		{
+		"FCTTIME": {
+		"hour": "9","hour_padded": "09","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533798000","pretty": "09:00 AM CEST am 09. August 2018","civil": "9:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "76.1", "metric": "24"},
+		"dewpoint": {"english": "60.8", "metric": "16"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "11",
+		"wspd": {"english": "5", "metric": "8"},
+		"wdir": {"dir": "O", "degrees": "101"},
+		"wx": "Sonnig",
+		"uvi": "2",
+		"humidity": "59",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "76.1", "metric": "24"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.98", "metric": "1015"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "10","hour_padded": "10","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533801600","pretty": "10:00 AM CEST am 09. August 2018","civil": "10:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "79.5", "metric": "26"},
+		"dewpoint": {"english": "60.9", "metric": "16"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "4",
+		"wspd": {"english": "6", "metric": "10"},
+		"wdir": {"dir": "OSO", "degrees": "111"},
+		"wx": "Sonnig",
+		"uvi": "3",
+		"humidity": "53",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "79.5", "metric": "26"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.97", "metric": "1015"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "11","hour_padded": "11","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533805200","pretty": "11:00 AM CEST am 09. August 2018","civil": "11:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "83.1", "metric": "28"},
+		"dewpoint": {"english": "60.0", "metric": "16"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "3",
+		"wspd": {"english": "7", "metric": "11"},
+		"wdir": {"dir": "OSO", "degrees": "122"},
+		"wx": "Sonnig",
+		"uvi": "5",
+		"humidity": "46",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "83", "metric": "28"},
+		"feelslike": {"english": "83", "metric": "28"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.96", "metric": "1015"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "12","hour_padded": "12","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533808800","pretty": "12:00 PM CEST am 09. August 2018","civil": "12:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "86.0", "metric": "30"},
+		"dewpoint": {"english": "58.6", "metric": "15"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "7",
+		"wspd": {"english": "7", "metric": "11"},
+		"wdir": {"dir": "SO", "degrees": "129"},
+		"wx": "Sonnig",
+		"uvi": "6",
+		"humidity": "40",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "85", "metric": "30"},
+		"feelslike": {"english": "85", "metric": "30"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.94", "metric": "1014"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "13","hour_padded": "13","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533812400","pretty": "01:00 PM CEST am 09. August 2018","civil": "1:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "89.3", "metric": "32"},
+		"dewpoint": {"english": "57.0", "metric": "14"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "10",
+		"wspd": {"english": "7", "metric": "11"},
+		"wdir": {"dir": "SO", "degrees": "138"},
+		"wx": "Sonnig",
+		"uvi": "7",
+		"humidity": "34",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "88", "metric": "31"},
+		"feelslike": {"english": "88", "metric": "31"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.92", "metric": "1013"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "14","hour_padded": "14","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533816000","pretty": "02:00 PM CEST am 09. August 2018","civil": "2:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "91.3", "metric": "33"},
+		"dewpoint": {"english": "54.8", "metric": "13"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "10",
+		"wspd": {"english": "8", "metric": "13"},
+		"wdir": {"dir": "SO", "degrees": "146"},
+		"wx": "Sonnig",
+		"uvi": "7",
+		"humidity": "29",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "89", "metric": "32"},
+		"feelslike": {"english": "89", "metric": "32"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.9", "metric": "1013"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "15","hour_padded": "15","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533819600","pretty": "03:00 PM CEST am 09. August 2018","civil": "3:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "92.9", "metric": "34"},
+		"dewpoint": {"english": "51.6", "metric": "11"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "9",
+		"wspd": {"english": "8", "metric": "13"},
+		"wdir": {"dir": "SSO", "degrees": "152"},
+		"wx": "Sonnig",
+		"uvi": "6",
+		"humidity": "25",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "92.9", "metric": "34"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.89", "metric": "1012"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "16","hour_padded": "16","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533823200","pretty": "04:00 PM CEST am 09. August 2018","civil": "4:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "95.6", "metric": "35"},
+		"dewpoint": {"english": "51.0", "metric": "11"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "6",
+		"wspd": {"english": "8", "metric": "13"},
+		"wdir": {"dir": "SSO", "degrees": "149"},
+		"wx": "Sonnig",
+		"uvi": "4",
+		"humidity": "22",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "95.6", "metric": "35"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.86", "metric": "1011"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "17","hour_padded": "17","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533826800","pretty": "05:00 PM CEST am 09. August 2018","civil": "5:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "95.3", "metric": "35"},
+		"dewpoint": {"english": "51.6", "metric": "11"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "7",
+		"wspd": {"english": "9", "metric": "14"},
+		"wdir": {"dir": "SSO", "degrees": "153"},
+		"wx": "Sonnig",
+		"uvi": "2",
+		"humidity": "23",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "95.3", "metric": "35"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.85", "metric": "1011"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "18","hour_padded": "18","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533830400","pretty": "06:00 PM CEST am 09. August 2018","civil": "6:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "93.6", "metric": "34"},
+		"dewpoint": {"english": "52.9", "metric": "12"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "11",
+		"wspd": {"english": "10", "metric": "16"},
+		"wdir": {"dir": "SSO", "degrees": "154"},
+		"wx": "Sonnig",
+		"uvi": "1",
+		"humidity": "25",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "91", "metric": "33"},
+		"feelslike": {"english": "91", "metric": "33"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.84", "metric": "1011"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "19","hour_padded": "19","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533834000","pretty": "07:00 PM CEST am 09. August 2018","civil": "7:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "91.6", "metric": "33"},
+		"dewpoint": {"english": "53.7", "metric": "12"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "12",
+		"wspd": {"english": "10", "metric": "16"},
+		"wdir": {"dir": "SSO", "degrees": "150"},
+		"wx": "Sonnig",
+		"uvi": "0",
+		"humidity": "28",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "89", "metric": "32"},
+		"feelslike": {"english": "89", "metric": "32"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.84", "metric": "1011"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "20","hour_padded": "20","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533837600","pretty": "08:00 PM CEST am 09. August 2018","civil": "8:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "88.5", "metric": "31"},
+		"dewpoint": {"english": "54.5", "metric": "12"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"fctcode": "1",
+		"sky": "15",
+		"wspd": {"english": "9", "metric": "14"},
+		"wdir": {"dir": "SSO", "degrees": "153"},
+		"wx": "Sonnig",
+		"uvi": "0",
+		"humidity": "32",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "86", "metric": "30"},
+		"feelslike": {"english": "86", "metric": "30"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.86", "metric": "1011"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "21","hour_padded": "21","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533841200","pretty": "09:00 PM CEST am 09. August 2018","civil": "9:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "83.8", "metric": "29"},
+		"dewpoint": {"english": "55.3", "metric": "13"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"fctcode": "1",
+		"sky": "7",
+		"wspd": {"english": "8", "metric": "13"},
+		"wdir": {"dir": "S", "degrees": "171"},
+		"wx": "Klar",
+		"uvi": "0",
+		"humidity": "38",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "83", "metric": "28"},
+		"feelslike": {"english": "83", "metric": "28"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.88", "metric": "1012"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "22","hour_padded": "22","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533844800","pretty": "10:00 PM CEST am 09. August 2018","civil": "10:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "80.4", "metric": "27"},
+		"dewpoint": {"english": "56.3", "metric": "14"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"fctcode": "1",
+		"sky": "4",
+		"wspd": {"english": "5", "metric": "8"},
+		"wdir": {"dir": "SSO", "degrees": "149"},
+		"wx": "Klar",
+		"uvi": "0",
+		"humidity": "44",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "81", "metric": "27"},
+		"feelslike": {"english": "80.4", "metric": "27"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "0",
+		"mslp": {"english": "29.9", "metric": "1013"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "23","hour_padded": "23","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "9","mday_padded": "09","yday": "220","isdst": "1","epoch": "1533848400","pretty": "11:00 PM CEST am 09. August 2018","civil": "11:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Donnerstag","weekday_name_night": "Donnerstag Nacht","weekday_name_abbrev": "Do","weekday_name_unlang": "Thursday","weekday_name_night_unlang": "Thursday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "77.4", "metric": "25"},
+		"dewpoint": {"english": "57.4", "metric": "14"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"fctcode": "1",
+		"sky": "9",
+		"wspd": {"english": "4", "metric": "6"},
+		"wdir": {"dir": "SSO", "degrees": "150"},
+		"wx": "Klar",
+		"uvi": "0",
+		"humidity": "50",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "77.4", "metric": "25"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "1",
+		"mslp": {"english": "29.92", "metric": "1013"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "0","hour_padded": "00","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533852000","pretty": "12:00 AM CEST am 10. August 2018","civil": "12:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "76.1", "metric": "24"},
+		"dewpoint": {"english": "58.1", "metric": "14"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"fctcode": "1",
+		"sky": "13",
+		"wspd": {"english": "4", "metric": "6"},
+		"wdir": {"dir": "SW", "degrees": "236"},
+		"wx": "Klar",
+		"uvi": "0",
+		"humidity": "54",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "76.1", "metric": "24"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "6",
+		"mslp": {"english": "29.96", "metric": "1015"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "1","hour_padded": "01","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533855600","pretty": "01:00 AM CEST am 10. August 2018","civil": "1:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "75.2", "metric": "24"},
+		"dewpoint": {"english": "59.1", "metric": "15"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"fctcode": "1",
+		"sky": "12",
+		"wspd": {"english": "7", "metric": "11"},
+		"wdir": {"dir": "WSW", "degrees": "254"},
+		"wx": "Klar",
+		"uvi": "0",
+		"humidity": "57",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "75.2", "metric": "24"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "6",
+		"mslp": {"english": "29.98", "metric": "1015"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "2","hour_padded": "02","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533859200","pretty": "02:00 AM CEST am 10. August 2018","civil": "2:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "73.7", "metric": "23"},
+		"dewpoint": {"english": "60.6", "metric": "16"},
+		"condition": "Heiter",
+		"icon": "clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"fctcode": "1",
+		"sky": "23",
+		"wspd": {"english": "11", "metric": "18"},
+		"wdir": {"dir": "W", "degrees": "260"},
+		"wx": "Meist klar",
+		"uvi": "0",
+		"humidity": "64",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "73.7", "metric": "23"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "13",
+		"mslp": {"english": "30.01", "metric": "1016"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "3","hour_padded": "03","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533862800","pretty": "03:00 AM CEST am 10. August 2018","civil": "3:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "72.8", "metric": "23"},
+		"dewpoint": {"english": "61.3", "metric": "16"},
+		"condition": "Teils Wolkig",
+		"icon": "partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+		"fctcode": "2",
+		"sky": "36",
+		"wspd": {"english": "9", "metric": "14"},
+		"wdir": {"dir": "WSW", "degrees": "255"},
+		"wx": "Wolkig",
+		"uvi": "0",
+		"humidity": "67",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "72.8", "metric": "23"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "11",
+		"mslp": {"english": "30.03", "metric": "1017"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "4","hour_padded": "04","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533866400","pretty": "04:00 AM CEST am 10. August 2018","civil": "4:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "71.6", "metric": "22"},
+		"dewpoint": {"english": "61.8", "metric": "17"},
+		"condition": "Teils Wolkig",
+		"icon": "partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+		"fctcode": "2",
+		"sky": "36",
+		"wspd": {"english": "9", "metric": "14"},
+		"wdir": {"dir": "WSW", "degrees": "258"},
+		"wx": "Wolkig",
+		"uvi": "0",
+		"humidity": "71",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "71.6", "metric": "22"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "5",
+		"mslp": {"english": "30.05", "metric": "1018"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "5","hour_padded": "05","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533870000","pretty": "05:00 AM CEST am 10. August 2018","civil": "5:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "71.1", "metric": "22"},
+		"dewpoint": {"english": "61.7", "metric": "16"},
+		"condition": "Teils Wolkig",
+		"icon": "partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+		"fctcode": "2",
+		"sky": "36",
+		"wspd": {"english": "8", "metric": "13"},
+		"wdir": {"dir": "W", "degrees": "261"},
+		"wx": "Wolkig",
+		"uvi": "0",
+		"humidity": "72",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "71.1", "metric": "22"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "5",
+		"mslp": {"english": "30.08", "metric": "1019"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "6","hour_padded": "06","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533873600","pretty": "06:00 AM CEST am 10. August 2018","civil": "6:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "69.2", "metric": "21"},
+		"dewpoint": {"english": "60.7", "metric": "16"},
+		"condition": "Teils Wolkig",
+		"icon": "partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"fctcode": "2",
+		"sky": "42",
+		"wspd": {"english": "7", "metric": "11"},
+		"wdir": {"dir": "W", "degrees": "268"},
+		"wx": "Wolkig",
+		"uvi": "0",
+		"humidity": "74",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "69.2", "metric": "21"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "4",
+		"mslp": {"english": "30.1", "metric": "1019"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "7","hour_padded": "07","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533877200","pretty": "07:00 AM CEST am 10. August 2018","civil": "7:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "68.9", "metric": "20"},
+		"dewpoint": {"english": "61.4", "metric": "16"},
+		"condition": "Teils Wolkig",
+		"icon": "partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"fctcode": "2",
+		"sky": "50",
+		"wspd": {"english": "8", "metric": "13"},
+		"wdir": {"dir": "W", "degrees": "272"},
+		"wx": "Wolkig",
+		"uvi": "0",
+		"humidity": "77",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "68.9", "metric": "20"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "3",
+		"mslp": {"english": "30.13", "metric": "1020"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "8","hour_padded": "08","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533880800","pretty": "08:00 AM CEST am 10. August 2018","civil": "8:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "69.7", "metric": "21"},
+		"dewpoint": {"english": "60.7", "metric": "16"},
+		"condition": "Teils Wolkig",
+		"icon": "partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"fctcode": "2",
+		"sky": "57",
+		"wspd": {"english": "10", "metric": "16"},
+		"wdir": {"dir": "W", "degrees": "274"},
+		"wx": "Wolkig",
+		"uvi": "1",
+		"humidity": "73",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "69.7", "metric": "21"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "20",
+		"mslp": {"english": "30.16", "metric": "1021"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "9","hour_padded": "09","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533884400","pretty": "09:00 AM CEST am 10. August 2018","civil": "9:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "70.2", "metric": "21"},
+		"dewpoint": {"english": "59.4", "metric": "15"},
+		"condition": "Wolkig",
+		"icon": "mostlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/mostlycloudy.gif",
+		"fctcode": "3",
+		"sky": "69",
+		"wspd": {"english": "11", "metric": "18"},
+		"wdir": {"dir": "W", "degrees": "277"},
+		"wx": "Stark bewölkt",
+		"uvi": "2",
+		"humidity": "69",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "70.2", "metric": "21"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "22",
+		"mslp": {"english": "30.19", "metric": "1022"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "10","hour_padded": "10","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533888000","pretty": "10:00 AM CEST am 10. August 2018","civil": "10:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "70.2", "metric": "21"},
+		"dewpoint": {"english": "58.6", "metric": "15"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "83",
+		"wspd": {"english": "12", "metric": "19"},
+		"wdir": {"dir": "W", "degrees": "274"},
+		"wx": "Bedeckt",
+		"uvi": "2",
+		"humidity": "67",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "70.2", "metric": "21"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "24",
+		"mslp": {"english": "30.21", "metric": "1023"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "11","hour_padded": "11","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533891600","pretty": "11:00 AM CEST am 10. August 2018","civil": "11:00 AM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "AM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "69.9", "metric": "21"},
+		"dewpoint": {"english": "57.6", "metric": "14"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "93",
+		"wspd": {"english": "12", "metric": "19"},
+		"wdir": {"dir": "W", "degrees": "273"},
+		"wx": "Bedeckt",
+		"uvi": "2",
+		"humidity": "65",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "69.9", "metric": "21"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "13",
+		"mslp": {"english": "30.22", "metric": "1023"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "12","hour_padded": "12","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533895200","pretty": "12:00 PM CEST am 10. August 2018","civil": "12:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "69.8", "metric": "21"},
+		"dewpoint": {"english": "56.4", "metric": "14"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "90",
+		"wspd": {"english": "12", "metric": "19"},
+		"wdir": {"dir": "W", "degrees": "274"},
+		"wx": "Bedeckt",
+		"uvi": "3",
+		"humidity": "62",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "69.8", "metric": "21"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "19",
+		"mslp": {"english": "30.23", "metric": "1024"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "13","hour_padded": "13","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533898800","pretty": "01:00 PM CEST am 10. August 2018","civil": "1:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "69.6", "metric": "21"},
+		"dewpoint": {"english": "55.0", "metric": "13"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "87",
+		"wspd": {"english": "11", "metric": "18"},
+		"wdir": {"dir": "W", "degrees": "276"},
+		"wx": "Bedeckt",
+		"uvi": "4",
+		"humidity": "60",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "69.6", "metric": "21"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "12",
+		"mslp": {"english": "30.23", "metric": "1024"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "14","hour_padded": "14","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533902400","pretty": "02:00 PM CEST am 10. August 2018","civil": "2:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "70.3", "metric": "21"},
+		"dewpoint": {"english": "54.1", "metric": "12"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "82",
+		"wspd": {"english": "11", "metric": "18"},
+		"wdir": {"dir": "WNW", "degrees": "282"},
+		"wx": "Bedeckt",
+		"uvi": "4",
+		"humidity": "56",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "70.3", "metric": "21"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "3",
+		"mslp": {"english": "30.22", "metric": "1023"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "15","hour_padded": "15","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533906000","pretty": "03:00 PM CEST am 10. August 2018","civil": "3:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "70.9", "metric": "22"},
+		"dewpoint": {"english": "53.4", "metric": "12"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "82",
+		"wspd": {"english": "11", "metric": "18"},
+		"wdir": {"dir": "WNW", "degrees": "289"},
+		"wx": "Bedeckt",
+		"uvi": "4",
+		"humidity": "54",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "70.9", "metric": "22"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "5",
+		"mslp": {"english": "30.21", "metric": "1023"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "16","hour_padded": "16","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533909600","pretty": "04:00 PM CEST am 10. August 2018","civil": "4:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "71.5", "metric": "22"},
+		"dewpoint": {"english": "52.5", "metric": "11"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "81",
+		"wspd": {"english": "10", "metric": "16"},
+		"wdir": {"dir": "WNW", "degrees": "284"},
+		"wx": "Bedeckt",
+		"uvi": "3",
+		"humidity": "51",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "71.5", "metric": "22"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "8",
+		"mslp": {"english": "30.21", "metric": "1023"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "17","hour_padded": "17","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533913200","pretty": "05:00 PM CEST am 10. August 2018","civil": "5:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "72.0", "metric": "22"},
+		"dewpoint": {"english": "52.1", "metric": "11"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "83",
+		"wspd": {"english": "9", "metric": "14"},
+		"wdir": {"dir": "WNW", "degrees": "284"},
+		"wx": "Bedeckt",
+		"uvi": "1",
+		"humidity": "50",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "72.0", "metric": "22"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "2",
+		"mslp": {"english": "30.2", "metric": "1023"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "18","hour_padded": "18","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533916800","pretty": "06:00 PM CEST am 10. August 2018","civil": "6:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "71.5", "metric": "22"},
+		"dewpoint": {"english": "51.6", "metric": "11"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "83",
+		"wspd": {"english": "8", "metric": "13"},
+		"wdir": {"dir": "WNW", "degrees": "284"},
+		"wx": "Bedeckt",
+		"uvi": "1",
+		"humidity": "50",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "71.5", "metric": "22"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "14",
+		"mslp": {"english": "30.2", "metric": "1023"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "19","hour_padded": "19","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533920400","pretty": "07:00 PM CEST am 10. August 2018","civil": "7:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "71.3", "metric": "22"},
+		"dewpoint": {"english": "51.9", "metric": "11"},
+		"condition": "Bedeckt",
+		"icon": "cloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+		"fctcode": "4",
+		"sky": "84",
+		"wspd": {"english": "8", "metric": "13"},
+		"wdir": {"dir": "WNW", "degrees": "288"},
+		"wx": "Bedeckt",
+		"uvi": "0",
+		"humidity": "51",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "71.3", "metric": "22"},
+		"qpf": {"english": "0.0", "metric": "0"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "24",
+		"mslp": {"english": "30.21", "metric": "1023"}
+		}
+		,
+		{
+		"FCTTIME": {
+		"hour": "20","hour_padded": "20","min": "00","min_unpadded": "0","sec": "0","year": "2018","mon": "8","mon_padded": "08","mon_abbrev": "Aug","mday": "10","mday_padded": "10","yday": "221","isdst": "1","epoch": "1533924000","pretty": "08:00 PM CEST am 10. August 2018","civil": "8:00 PM","month_name": "August","month_name_abbrev": "Aug","weekday_name": "Freitag","weekday_name_night": "Freitag Nacht","weekday_name_abbrev": "Fr","weekday_name_unlang": "Friday","weekday_name_night_unlang": "Friday Night","ampm": "PM","tz": "","age": "","UTCDATE": ""
+		},
+		"temp": {"english": "70.2", "metric": "21"},
+		"dewpoint": {"english": "52.4", "metric": "11"},
+		"condition": "Regen möglich",
+		"icon": "chancerain",
+		"icon_url":"http://icons.wxug.com/i/c/k/chancerain.gif",
+		"fctcode": "12",
+		"sky": "84",
+		"wspd": {"english": "6", "metric": "10"},
+		"wdir": {"dir": "WNW", "degrees": "287"},
+		"wx": "Einige Schauer",
+		"uvi": "0",
+		"humidity": "53",
+		"windchill": {"english": "-9999", "metric": "-9999"},
+		"heatindex": {"english": "-9999", "metric": "-9999"},
+		"feelslike": {"english": "70.2", "metric": "21"},
+		"qpf": {"english": "0.06", "metric": "2"},
+		"snow": {"english": "0.0", "metric": "0"},
+		"pop": "30",
+		"mslp": {"english": "30.21", "metric": "1023"}
+		}
+	]
+		,"query_zone": "999",
+	"alerts": [
+		{
+		"type": "HEA",
+		"wtype_meteoalarm": "5",
+		"wtype_meteoalarm_name": "Extreme high temperature",
+		"level_meteoalarm": "3",
+		"level_meteoalarm_name": "Orange",
+		"level_meteoalarm_description": "The weather is dangerous. Unusual meteorological phenomena have been forecast. Damage and casualties are likely to happen. Be very vigilant and keep regularly informed about the detailed expected meteorological conditions. Be aware of the risks that might be unavoidable. Follow any advice given by your authorities.",
+		"description": "Disruption due to extreme high temperatures from 11PM CEST WED until 10:59PM CEST THU",
+		"date": "2018-08-09 01:00:00 GMT",
+		"date_epoch": "NA",
+		"expires": "2018-08-09 20:59:00 GMT",
+		"expires_epoch": "NA",
+		"message": "Disruption due to extreme high temperatures from 11PM CEST WED until 10:59PM CEST THU)",
+		"phenomena": "NA",
+		"significance": "NA",
+		"attribution": "Information provided by , <a href='http://meteoalarm.eu/'>EUMETNET - MeteoAlarm</a> Note: Time delays between this website and <a href='http://meteoalarm.eu/'>Meteoalarm.eu</a> are possible. For the most up-to-date information about alert levels as published by the participating National Meteorological Services, please visit <a href='http://meteoalarm.eu/'>Meteoalarm</a>. For terms of use of this information, and copyright information, see <a href='http://meteoalarm.eu/'>Meteoalarm</a> Terms of Use."
+		}
+	]
+}
