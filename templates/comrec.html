@@ -19,18 +19,28 @@
 }
 
 </style>
-<table>
+<table style="width: 100%;">
 <tr>
 <td style="vertical-align: top; width: 50%;">
-<h2>Source string</h2>
-<p>Use an URL to query an external source, or paste a result (e.g. from UDP monitor) in the input field</p>
-<p>Fetch URL: <input type="text" id="fetchurl" value="http://localhost/plugins/commandrecognition/wudemo.json"><button type="button" id="btnurl" onclick="requesturl(); return false;">Request</button></p>
-<p>Or: Paste a string: <input id="inputstring"></p>
+<h2>Source</h2>
+<div data-role="navbar">
+	<ul>
+	<li><a href="#" onclick="$('#divurl').show();$('#divstring').hide();" class="ui-btn-active">Webpage</a></li>
+	<li><a href="#" onclick="$('#divurl').hide();$('#divstring').show();">Input field</a></li>
+	</ul>
+</div>
 
+<!-- <p>Use an URL to query an external source, or paste a result (e.g. from UDP monitor) in the input field</p> -->
+<div id="divurl">
+	<p>Fetch URL: <input type="text" id="fetchurl" value="http://localhost/plugins/commandrecognition/wudemo.json"><button type="button" id="btnurl" onclick="requesturl(); return false;">Request</button></p>
+</div>
+<div id="divstring" style="display:none;">
+	<p>Paste a string: <input id="inputstring"></p>
+</div>
  
 <h2>Result</h2>
 <p>Command recognition: <input name="recognition" id="recognition" type="text">
-<p>Regex: <span id="regex"></span></p>
+<!-- <p>Regex: <span id="regex"></span></p> -->
 <p>Found value: <span id="foundval"></span></p>
 <p>Status: <span id="syntaxstatus"></span></p>
 </td>
