@@ -84,15 +84,15 @@ function update_result()
 		conversion = 1;
 	}
 	else if (recstr.indexOf('\\2') != -1) {
-		regexval = '(?<=^.{1})[\x00-\xFF]';
+		regexval = '[\x00-\xFF]{2}';
 		conversion = 1;
 	}
 	else if (recstr.indexOf('\\3') != -1) {
-		regexval = '(?<=^.{2})[\x00-\xFF]';
+		regexval = '[\x00-\xFF]{3}';
 		conversion = 1;
 	}
 	else if (recstr.indexOf('\\4') != -1) {
-		regexval = '(?<=^.{3})[\x00-\xFF]';
+		regexval = '[\x00-\xFF]{4}';
 		conversion = 1;
 	}
 	<!-- else if (recstr.indexOf('\\h') != -1) { -->
@@ -118,8 +118,12 @@ function update_result()
 			regexval_result = searchtext.match(regexval);
 			var resultvalue = regexval_result[0];
 			if (conversion == 1) { 
-				// Generate ASCII Code
-				resultvalue = regexval_result[0].charCodeAt(0);
+				// Generate byte value
+				var bytearray = stringToBytes(regexval_result[0]);
+				resultvalue = 0;
+				for(var b = 0; b < bytearray.length; b++) {
+					resultvalue = resultvalue + bytearray[b] * Math.pow(2, b*8);
+				}
 			}
 			
 			console.log("Regex Value:", resultvalue);
@@ -265,5 +269,22 @@ function htmlDecode(value){
   return $('<div/>').html(value).text();
 }
 
+function stringToBytes ( str ) {
+  var ch, st, re = [];
+  for (var i = 0; i < str.length; i++ ) {
+    ch = str.charCodeAt(i);  // get char 
+    st = [];                 // set up "stack"
+    do {
+      st.push( ch & 0xFF );  // push byte to stack
+      ch = ch >> 8;          // shift value down by 1 byte
+    }  
+    while ( ch );
+    // add stack contents to result
+    // done because chars have "wrong" endianness
+    re = re.concat( st.reverse() );
+  }
+  // return an array of bytes
+  return re;
+}
 
 </script>
