@@ -1,0 +1,130 @@
+<style>
+.highlight-green
+{ background-color: #e3fcef;
+  font-weight: bold;
+}
+.highlight-red
+{ background-color: #ffebe5;
+  font-weight: bold;
+}
+
+</style>
+
+<table class="confluenceTable">
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<th class="confluenceTh">Syntax</th>
+			<th class="confluenceTh">Beschreibung</th>
+		</tr>
+		<tr>
+			<td class="highlight-green confluenceTd" colspan="2" data-highlight-colour="green">Such-Kommandos</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\x</td>
+			<td class="confluenceTd">Hexadezimal (z.B. \x09)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\\</td>
+			<td class="confluenceTd">für \</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\.</td>
+			<td class="confluenceTd">irgendein Zeichen</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\w</td>
+			<td class="confluenceTd">irgendein Wort</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\#</td>
+			<td class="confluenceTd">irgendeine Nummer</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\t</td>
+			<td class="confluenceTd">Tab (0x09)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\b</td>
+			<td class="confluenceTd">0x20, 0x09</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\r</td>
+			<td class="confluenceTd">0x0d (CR)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\n</td>
+			<td class="confluenceTd">0x0a (LF)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\d</td>
+			<td class="confluenceTd">0-9 (Ziffern)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\m</td>
+			<td class="confluenceTd">A-Z, a-z, 0-9 (Ziffern und Buchstaben)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\a</td>
+			<td class="confluenceTd">A-Z, a-z (Buchstaben)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\s12</td>
+			<td class="confluenceTd">12 Zeichen überspringen</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\ixxx\i</td>
+			<td class="confluenceTd">Springe an die Stelle nach xxx</td>
+		</tr>
+		<tr>
+			<td class="highlight-red confluenceTd" colspan="2" data-highlight-colour="red">Wert-Übernahme</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\v</td>
+			<td class="confluenceTd">Wertetext (konkret muss es eine Nummer sein - Text funktioniert nicht)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\1</td>
+			<td class="confluenceTd">Wertebyte 1 (niederwertigst)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\2</td>
+			<td class="confluenceTd">Wertebyte 2</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\3</td>
+			<td class="confluenceTd">Wertebyte 3</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\4</td>
+			<td class="confluenceTd">Wertebyte 4</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\h</td>
+			<td class="confluenceTd">Wertetext als Hexadezimalzahl</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Tipps und Hinweise</h2>
+<ul>
+	<li>Der erste String wird immer implizit gesucht (ohne die Verwendung von \ixxx\i)</li>
+	<li>Beim Betrachten von Seiten im Webbrowser immer die Quelltext-Ansicht verwenden (meist &quot;Seitenquelltext anzeigen&quot; oder ähnlich) - die Webbrowser verwenden sonst eine optisch aufbereitete Ansicht, die nicht den Originalquellcode entspricht.</li>
+	<li>Ausschließlich Zahlen können übernommen werden. Ein Text kann nicht verwendet werden.</li>
+	<li>Es kann bei Text allerdings ein einzelnes Zeichen als ASCII-Code ausgelesen werden mit \1. <ul>
+			<li>Beispiel: Text ist Enabled oder Disabled. </li>
+			<li>\1 bei &quot;Enabled&quot; liefert den Wert 105 (ASCII-Code von &quot;E&quot;)</li>
+			<li>\1 bei &quot;Disabled&quot; liefert den Wert 104 (ASCII-Code von &quot;D&quot;)</li>
+			<li>Mit einem Status-Baustein können die beiden Werte wieder in 1 und 0 umgewandelt werden.</li>
+		</ul>
+	</li>
+</ul>
+<h1>Siehe auch</h1>
+<p>
+	<a class="confluence-link" href="/display/LOX/Virtueller+HTTP-Eingang" data-linked-resource-id="5046758" data-linked-resource-version="10" data-linked-resource-type="page" data-linked-resource-default-alias="Virtueller HTTP-Eingang" data-base-url="https://www.loxwiki.eu">Virtueller HTTP-Eingang</a>
+</p>
+<p>
+	<a class="confluence-link" href="/display/LOX/UDP+Eingang+definieren" data-linked-resource-id="3964945" data-linked-resource-version="3" data-linked-resource-type="page" data-linked-resource-default-alias="UDP Eingang definieren" data-base-url="https://www.loxwiki.eu">UDP Eingang definieren</a>
+</p>

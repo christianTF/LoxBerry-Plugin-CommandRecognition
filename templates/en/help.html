@@ -1,0 +1,110 @@
+<style>
+.highlight-green
+{ background-color: #e3fcef;
+  font-weight: bold;
+}
+.highlight-red
+{ background-color: #ffebe5;
+  font-weight: bold;
+}
+
+</style>
+
+<table class="confluenceTable">
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<th class="confluenceTh">Syntax</th>
+			<th class="confluenceTh">Description</th>
+		</tr>
+		<tr>
+			<td class="highlight-green confluenceTd" colspan="2" data-highlight-colour="green">Search commands</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\x</td>
+			<td class="confluenceTd">Hexadecimal (e.g. \x09)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\\</td>
+			<td class="confluenceTd">For \ (backslash)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\.</td>
+			<td class="confluenceTd">Any sign</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\w</td>
+			<td class="confluenceTd">Any word</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\#</td>
+			<td class="confluenceTd">Any number</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\t</td>
+			<td class="confluenceTd">Tab (0x09)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\b</td>
+			<td class="confluenceTd">Tab or blank (0x20, 0x09)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\r</td>
+			<td class="confluenceTd">CR Carriage Return (0x0d)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\n</td>
+			<td class="confluenceTd">LF Line Feed (0x0a)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\d</td>
+			<td class="confluenceTd">0-9 (digits)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\m</td>
+			<td class="confluenceTd">A-Z, a-z, 0-9 (alphabetic characters or digits)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\a</td>
+			<td class="confluenceTd">A-Z, a-z (alphabetic characters)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\s12</td>
+			<td class="confluenceTd">Skip number of characters (eg \s17 skip 17 characters)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\ixxx\i</td>
+			<td class="confluenceTd">Move the cursor to the position after text 'xxx'</td>
+		</tr>
+		<tr>
+			<td class="highlight-red confluenceTd" colspan="2" data-highlight-colour="red">Value Syntax</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\v</td>
+			<td class="confluenceTd">Value (actually this needs to be a number. Text does not work)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\1</td>
+			<td class="confluenceTd">Byte 1 (lowest significant bit)</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\2</td>
+			<td class="confluenceTd">Byte 2</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\3</td>
+			<td class="confluenceTd">Byte 3</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\4</td>
+			<td class="confluenceTd">Byte 4</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd">\h</td>
+			<td class="confluenceTd">Read hex value</td>
+		</tr>
+	</tbody>
+</table>

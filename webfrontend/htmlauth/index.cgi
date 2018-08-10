@@ -2,8 +2,8 @@
 
 use LoxBerry::Web;
 my $plugintitle = "Command Recognition V" . LoxBerry::System::pluginversion();
-my $helplink = "http://www.loxwiki.eu:80/x/2wzL";
-# my $helptemplate = "help.html";
+my $helplink = "https://www.loxwiki.eu/x/-gA_Ag";
+my $helptemplate = "help.html";
 
 LoxBerry::Web::lbheader($plugintitle, $helplink, $helptemplate);
 
