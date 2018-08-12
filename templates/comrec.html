@@ -186,6 +186,10 @@ function parse_recstring(recstr)
 	// \x.. (hex value) is \x.. needs not to replaced
 	// \\ (double backslash) needs not to be replaced
 	
+	// We need to escape users [ and ] brackets
+	regex = regex.replace(/\[/g, '\\[');
+	regex = regex.replace(/\]/g, '\\]');
+	
 	// Swap \. with . and vice versa (Loxone syntax is inverse to RegEx syntax)
 	regex = regex.replace(/\./g, '\\.'); // \. to .
 	regex = regex.replace(/\\\\\./g, '.'); // \. to .
