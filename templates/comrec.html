@@ -36,11 +36,11 @@
 	<p>Fetch URL: <input type="text" id="fetchurl" value="http://localhost/plugins/commandrecognition/wudemo.json"><button type="button" id="btnurl" onclick="requesturl(); return false;">Request</button></p>
 </div>
 <div id="divstring" style="display:none;">
-	<p>Paste a string: <input id="inputstring"></p>
+	<p>Paste a string: <input id="inputstring" autocomplete="string-to-parse"></p>
 </div>
  
 <h2>Result</h2>
-<p>Command recognition: <a href="#infopanel">(Quick reference)</a> <input name="recognition" id="recognition" type="text"></p>
+<p>Command recognition: <a href="#infopanel">(Quick reference)</a> <input name="recognition" id="recognition" type="text" autocomplete="command-recognition"></p>
 <!-- <span style="font-size: 80%;">Quick reference: Open the help</span> -->
 
 <!-- <p>Regex: <span id="regex"></span></p> -->
@@ -164,6 +164,12 @@ function parse_recstring(recstr)
 {
 	// console.log("Recognition string:", recstr);
 	var regex=recstr;
+	
+	// We need to escape users [ and ] brackets
+	regex = regex.replace(/\[/g, '\\[');
+	regex = regex.replace(/\]/g, '\\]');
+	
+	
 	var i_count = 0;
 	if (!regex) return;
 	while(regex.indexOf("\\i") !== -1) {
@@ -185,11 +191,7 @@ function parse_recstring(recstr)
 	
 	// \x.. (hex value) is \x.. needs not to replaced
 	// \\ (double backslash) needs not to be replaced
-	
-	// We need to escape users [ and ] brackets
-	regex = regex.replace(/\[/g, '\\[');
-	regex = regex.replace(/\]/g, '\\]');
-	
+		
 	// Swap \. with . and vice versa (Loxone syntax is inverse to RegEx syntax)
 	regex = regex.replace(/\./g, '\\.'); // \. to .
 	regex = regex.replace(/\\\\\./g, '.'); // \. to .
