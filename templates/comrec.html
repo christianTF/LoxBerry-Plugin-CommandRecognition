@@ -36,7 +36,7 @@
 	<p>Fetch URL: <input type="text" id="fetchurl" value="http://localhost/plugins/commandrecognition/wudemo.json"><button type="button" id="btnurl" onclick="requesturl(); return false;">Request</button></p>
 </div>
 <div id="divstring" style="display:none;">
-	<p>Paste a string: <input id="inputstring" autocomplete="string-to-parse"></p>
+	<p>Paste a string: <textarea id="inputstring" placeholder="Type or paste the result of an web, interface or UDP response" style="font-size: 11px;font-family:'Lucida Console', Monaco, monospace;line-height: normal;"></textarea><!-- <input id="inputstring" autocomplete="string-to-parse"> --> </p>
 </div>
  
 <h2>Result</h2>
@@ -52,7 +52,7 @@
 <p id="sslwarning"></p>
 <div style="width: 100%; height: 70vh; overflow-y: auto;">
 <span id="rawhtml" style="display: none;"></span>
-<span id="visiblehtml"></span>
+<div id="visiblehtml" style="line-height: normal;"></div>
 </div>
 </td>
 </tr>
@@ -141,11 +141,11 @@ function update_result()
 		$('#foundval').html('<span class="error">No value found</span>');
 	}
 	
-	if (regex_result[0] && regexval_result[0]) {
+	if (regex_result != null && regex_result[0] && regexval_result != null && regexval_result[0]) {
 		console.log("Highlight String and Value");
 		highlight(regex_result.index, regex_result[0].length, regexval_result.index, regexval_result[0].length);
 	}
-	else if (regex_result[0]) {
+	else if (regex_result != null && regex_result[0] !== 'undefined') {
 		console.log("Highlight String only");
 		highlight(regex_result.index, regex_result[0].length);
 	}
