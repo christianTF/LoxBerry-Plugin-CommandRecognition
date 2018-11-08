@@ -217,12 +217,12 @@ function parse_recstring(recstr)
 	
 	/* Value evaluation */
 	// Remove everything after value eval string in regex
-	regex = regex.replace(/(\\v)(.*)/gs, "");
-	regex = regex.replace(/(\\1)(.*)/gs, "");
-	regex = regex.replace(/(\\2)(.*)/gs, "");
-	regex = regex.replace(/(\\3)(.*)/gs, "");
-	regex = regex.replace(/(\\4)(.*)/gs, "");
-	regex = regex.replace(/(\\h)(.*)/gs, "");
+	regex = regex.replace(/(\\v)(.*)/g, "");
+	regex = regex.replace(/(\\1)(.*)/g, "");
+	regex = regex.replace(/(\\2)(.*)/g, "");
+	regex = regex.replace(/(\\3)(.*)/g, "");
+	regex = regex.replace(/(\\4)(.*)/g, "");
+	regex = regex.replace(/(\\h)(.*)/g, "");
 	// regex = '/' + regex + '/';
 	$('#regex').text(regex);
 	return regex;
