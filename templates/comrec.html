@@ -275,10 +275,12 @@ function requesturl() {
 	
 	$('#fetchurl').val(url);
 	
-	
+	var t1 = new Date().getTime();
 	
 	var jqxhr = $.post( "ajax.cgi", { action: 'request', url: url })
 	.done(function(data) {
+		var t2 = new Date().getTime();
+		console.log("Web call response time:", t2-t1, "ms");
 		rawhtml = data;
 		if (rawhtml === "") {
 			$('#visiblehtml').html('<span style="color: blue;">Website returned empty data</span>');
