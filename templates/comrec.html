@@ -175,6 +175,10 @@ function parse_recstring(recstr)
 	regex = regex.replace(/\[/g, '\\[');
 	regex = regex.replace(/\]/g, '\\]');
 	
+	// We need to escape users ( and ) brackets
+	regex = regex.replace(/\(/g, '\\(');
+	regex = regex.replace(/\)/g, '\\)');
+	
 	
 	var i_count = 0;
 	if (!regex) return;
